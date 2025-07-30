@@ -1,0 +1,169 @@
+# code for determine the character entered by the user
+char=input("press any key:")
+if char.isalpha():
+    print(char,"is a character")
+if char.isdigit():
+    print(char,"is a digit")
+if char.isspace():
+    print(char,"is a space")
+if char.isalnum():
+    print(char,"is a alphanumeric")
+    
+
+
+
+#code for the if condition check,whether the person is eligible to vote or not
+#age >18
+
+age = int(input("Enter the age of the person:"))
+if age>=18:
+    print("Eligible To Vote")
+
+
+
+
+
+
+
+#code to check the number is positive or not
+num=int(input("Enter a number:"))
+if num>0:
+        print(num,"is a positive")
+if num<0:
+        print(num,"is negative")
+if num==0:
+        print(num,"is zero")
+
+
+
+
+
+# if-else 
+age=int(input("Enter the age of the person:"))
+if age>18:
+    print(age,"Is eligible for vote")
+else:
+    print(age,"Is not eligible for vote")
+
+
+
+#check the number is a even or odd
+num=int(input("Enter a number"))
+if num%2==0:
+    print(num,"is even")
+else:
+    print(num,"is odd")
+    
+
+
+
+'''program to enter any char.if the entered char is in lowercase 
+than convert the char into upper and  vicevcersa'''
+ch=input("enter a char from a to z")
+if ch>='A' and ch<='Z':
+    ch= ch.lower()
+    print("the entered character was in uppercase... lower:"+ch)
+else:
+    ch=ch.upper()
+    print("the entered character was in lowercase... upper:"+ch)
+
+
+
+# code for checking the intervals of a given number 
+num=int(input("Enter the number:"))
+if num>=0 and num<=10:
+    print(num,"is in 0-10 range")
+elif num>=11 and num<=20:
+    print(num,"is in 11-20 range")
+elif num>=21 and num<=30:
+    print(num,"is in 21-30 range")
+else:
+    print("out of range")
+
+
+
+
+
+
+
+
+num=int(input("Enter the number:"))
+if num>0:
+    print(num,"is a postive number")
+elif num<0:
+    print(num,"is a negative number")
+else:
+    print(num,"is a zero")
+
+
+
+#printing the while loop until n
+n=int(input("Enter the values of n"))
+loop=0
+while loop<=n:
+    print(loop,end='  ')
+    loop+=1
+    
+
+
+
+#reverse  loop 
+num=int(input("enter the value of n"))
+while num>0:
+    print(num,end=' ')
+    num-=1
+
+#printing the even numbers till n
+n=int(input("Enter the Value of n"))
+i=0
+while i<=n:
+    if i%2==0:
+        print(i,end=' ')
+    i+=1
+
+
+
+#printing the odd numbers till n
+n=int(input("Enter the Value of n"))
+i=0
+while i<=n:
+    if i%2==1:
+        print(i,end=' ')
+    i+=1
+
+
+
+''' program to read the numbers untill -1 is encountered . also count  negatives ,postives and zeroes entered by the user'''
+
+n=p=z=0
+print("enter -1 to exit!!!")
+while(1):
+    num = int(input("Enter any number :"))
+    if num==-1:
+        break
+    if num==0:
+        z+=1
+    elif num>0:
+        p+=1
+    else:
+        n+=1
+print("count of postivees entered :",p)
+print("count of negatives entered :",n)       
+print("count of zeroes entered :",z)
+
+
+
+
+''' write a program to convert binary number to decimal number
+while loop only 
+input=1101
+output=13'''
+bnum=int(input("Enter a binary number:"))
+dnum=i=0
+while bnum!=0: #bnum>0
+    r=bnum%10
+    dnum=dnum+r*(2**i)
+    bnum//=10
+    i+=1
+print("Decimal equivalent :",dnum)
+    

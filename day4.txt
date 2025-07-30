@@ -1,0 +1,143 @@
+''' write a program to read a character untill * is entered.
+count the number of uppercase,lowercase,and number'''
+ch=input("Enter any character:")
+n=u=l=0
+if ch>='0' and ch<='9':
+    n+=1
+elif ch>='a' and ch<='z':
+    l+=1
+elif ch>='A' and ch<='Z':
+    u+=1
+while ch!='*':
+    ch=input("enter any character:")
+    if ch>='0' and ch<='9':
+        n+=1
+    elif ch>='a' and ch<'z':
+        l+=1
+    elif ch>='A' and ch<='Z':
+        u+=1
+    while ch!='*':
+        ch=input("enter any character:")
+        if ch>='0' and ch<='9':
+            n+=1
+        elif ch>='a' and ch<='z':
+            l+=1
+        elif ch>='A' and ch<='Z':
+            u+=1
+print("lowercase char:",l)
+print("uppercase char:",u)
+print("number char:",n)
+
+
+
+
+BASIC LOOPS:-
+
+
+for loop
+
+#simple for loop (string)
+str='Cheetah'
+for i in str:
+    print(i,end=' ')
+
+#list in strings
+s=['Cat','Dog','Fish']
+for pet in s:
+    print(pet)
+
+
+#for with-in range
+n=int(input("Enter the value of n"))
+for i in range(n+1):
+    print(i,end=' ')
+
+'''for with-in range'''
+n=int(input("Enter the value of n"))
+for i in range(1,n+1):
+    print(i,end=' ')
+print("\n")
+print("Reverse Order of n:")
+for i in range(n,0,-1):
+    print(i,end=' ')
+
+
+
+
+
+'''' code for the printing multiplication table of n, where n is entered by the user'''
+n=int(input("Enter the Table"))
+end=int(input("Enter The End number:"))
+print("Multiplication Table of :",n)
+print("***************************")
+for i in range(1,end+1):
+    print(n,"X",i,'',"= ",n*i)
+
+
+
+#program to display all the leap years from 1900 ,2101
+st=int(input("Enter the Start Year"))
+end=int(input("Enter The End Year"))
+for i in range(st,end+1):
+    if i%4==0:
+        print(i)
+
+#Basel series
+n=int(input("Enter the number"))
+s=0
+for i in range(1,n+1):
+    s=s+(1/(i**2))
+print(s)
+
+
+
+
+n=int(input("Enter the number"))
+s=0
+for i in range(1,n+1):
+    a=i/(i+1)
+    s=s+a
+print(s)
+
+
+
+n=int(input("Enter the number"))
+s=0
+for i in range(1,n+1):
+    a=(i**i)/i
+    s=s+a
+print(s)
+
+
+
+'''' Generating a Calendar Manually'''
+sday=int(input("Enter the Start Day of the month(1-7):"))
+numdays=int(input("enter the number of days "))
+print("Sun Mon Tue Wed Thu Fri Sat")
+print("---------------------------")
+for i in range(sday-1):
+    print (end="        ")
+    i=sday-1
+for j in range(1,numdays+1):
+    if i>6:
+        print()
+        i=1
+    else:
+        i+=1
+    print(str(j)+" ",end=' ')
+
+
+
+
+
+
+'''' Generating a Calendar Manually'''
+mdays=int(input("Enter the month days:"))
+sdays=int(input("Enter the days:"))
+print("Sun  Mon  Tue  Wed  Thu  Fri  Sat")
+for _ in range(sdays):
+    print("    ",end='')
+for days in range(1,mdays+1):
+    print(f"{days:>3}",end='  ')
+    if(sdays+days)%7==0:
+        print()

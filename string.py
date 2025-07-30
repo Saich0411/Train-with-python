@@ -1,0 +1,8 @@
+str1=str(input("enter a string:"))
+print(str1[3])
+print(str1[-2])
+print(len(str1))
+print(str1.upper())
+print(str1.lower())
+print(str1[1:3])
+print(str1[::-1])
